@@ -1,0 +1,10 @@
+- slug: data-lessons
+  name: Classroom Data Intensive Lessons
+  description: "Classroom data lessons."
+  color: '#1abc9c'
+
+- slug: self-paced-tutorial
+  name: Self Paced Data Tutorials
+  description: "Individual data tutorials / lessons that focus on a specific data type and
+  associated skill or set of skills."
+  color: '#1abc9c'

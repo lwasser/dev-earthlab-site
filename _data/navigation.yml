@@ -1,23 +1,27 @@
 # main links links
 main:
 
-  - title: "Archive"
-    url: /archive/
+  - title: "Code Tutorials"
+    url: /tutorials/
 
-  - title: "Browse by package"
-    url: /tags/
+  - title: "Classroom Data Lessons"
+    url: /data-lessons/
 
-  - title: "Browse by category"
+  - title: "Tools"
     url: /categories/
 
   - title: "About"
     url: /about/
 
-spatial-intro:
+  - title: "CU Earth Lab Home"
+    url: //
 
-  - title: Test Side Bar
+
+open-science:
+
+  - title: Open Science
     children:
-      - title: "A link to law"
+      - title: "Intro to Reproducibility"
         url: /law
       - title: "Another Link"
         url: /testWontWork
