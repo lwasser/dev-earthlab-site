@@ -14,21 +14,21 @@ author_profile: false
 
 
   {% for category in site.data.categories %}
+
   - {{ category.slug }}{{ category.name }}
-  {% endfor %}
 
-
-  {% for category in site.data.categories[page.category]  %}
-    {{ category.name }}
   {% endfor %}
 
 
 
-  <ul>
-    {% for post in site.categories.data-lessons %}
-    asd
-      {% if post.url %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endif %}
+  {% for category in site.data.categories %}
+  <li><a name="{{ category | first }}">{{ category | first }}</a>
+    <ul>
+    {% for posts in category %}
+      {% for post in posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
     {% endfor %}
-  </ul>
+    </ul>
+  </li>
+{% endfor %}
