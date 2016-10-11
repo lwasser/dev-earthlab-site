@@ -1,6 +1,6 @@
 ---
 layout: archive
-permalink: /tutorials/
+permalink: /tutorials-del/
 title: "Code Tutorials"
 author_profile: false
 published: true

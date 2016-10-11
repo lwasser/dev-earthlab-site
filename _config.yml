@@ -45,7 +45,7 @@ social:
 
 # Analytics
 analytics:
-  provider               : 
+  provider               :
   google:
     tracking_id          :
 
@@ -214,3 +214,16 @@ defaults:
       comments: true
       share: true
       related: true
+
+# classroom lessons are sets of materials and will be collections
+collections:
+  open-science:
+    output: true
+    permalink: /:collection/:path/
+  slide-shows:
+    output: false
+
+
+# Slideshow stuff
+# Format for the slides, can be either 16:9 or 4:3
+format: '4:3'

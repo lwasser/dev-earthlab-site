@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>dataONE - {{page.title}}</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/resources/dataone.css">
+</head>
+<body>
+  <textarea id="source">
+
+class: center, middle, title
+
+# {{ page.title }}
+
+## {{ page.author }}
+
+---
+
+layout: true
+
+.logo[
+![logo]({{ site.baseurl }}/resources/logo.jpg)
+]
+
+---
+
+{{ page.content }}
+
+  </textarea>
+  <script src="{{ site.baseurl }}/resources/remark-latest-min.js">
+  </script>
+  <script>
+  var slideshow = remark.create({
+    ratio: '{{ site.format }}',
+    slideNumberFormat: function (current, total) {
+      return '<span class="progressbar"><span class="step' + Math.round(current/total*11-1) + '">&nbsp;</span></span>';
+    },
+    countIncrementalSlides: false
+  });
+  </script>
+</body>
+</html>

@@ -21,7 +21,7 @@ open-science:
 
   - title: Open Science
     children:
-      - title: "Intro to Reproducibility"
-        url: /law
+      - title: "Activity Overview"
+        url: /data-lessons/intro-open-science/
       - title: "Another Link"
         url: /testWontWork
