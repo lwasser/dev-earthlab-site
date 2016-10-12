@@ -31,8 +31,8 @@ class: middle
 
 ## Why Use Reproducible Methods?
 
-* More efficient
-* Less redundant science
+* More efficient.
+* Less redundant science.
 * Others can more easily build upon our work.
 
 
@@ -43,23 +43,24 @@ class: middle
 
 ![good better best](/images/slide-shows/intro-rr/Good-better-best_RepSciCur_PengScience.jpg)
 
+.caption[
 Reproducibility spectrum for published research.
-** Source: Peng, RD Reproducible
+Source: Peng, RD Reproducible
 Research in Computational Science Science (2011): 1226–1227 via Reproducible
-Science Curriculum **
+Science Curriculum]
 
 ---
 
-
-## [Five selfish reasons to work reproducibly](http://www.genomebiology.com/2015/16/1/274)
+## <a href="http://www.genomebiology.com/2015/16/1/274" target="_blank">Five selfish reasons to work reproducibly</a>
 _Florian Markowetz_
 
+1. Reproducibility avoid critical mistakes.
+2. Reproducibility makes it easier to write papers.
+3. Reproducibility helps reviewers see it your way.
+4. Reproducibility enables continuity of your work.
+5. Reproducibility helps to build your reputation.
 
-1. Reproducibility helps to avoid disaster
-2. Reproducibility makes it easier to write papers
-3. Reproducibility helps reviewers see it your way
-4. Reproducibility enables continuity of your work
-5. Reproducibility helps to build your reputation
+
 
 ---
 class: middle
@@ -82,13 +83,13 @@ publicly available in a form that people can find and understand them.
 ---
 class: top center
 
-.wCaption[
+.wCaption-50[
 ![Plos graphic](http://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0026828.g001)
 ]
 
-**Better Research**: Papers from which data were shared have fewer errors.
+.caption[**Better Research**: Papers from which data were shared have fewer errors.
 <a href="http://dx.doi.org/10.1371/journal.pone.0026828" target="_blank">
-  Wicherts et al (2011) </a>
+  Wicherts et al (2011) </a>]
 
 ---
 ## Better Research - Citation
@@ -125,7 +126,7 @@ class: top center
 
 ---
 
-## 1. Organization
+## 1. Organization - Files & Directories
 
 The more self explanatory the better:
 
@@ -142,9 +143,9 @@ The more self explanatory the better:
 ![](http://journals.plos.org/ploscompbiol/article/figure/image?size=large&id=info:doi/10.1371/journal.pcbi.1000424.g001)
 
 
-<a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424" target="_blank">
+.caption[<a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424" target="_blank">
   Noble, William Stafford, 2009. A quick guide to organizing computational biology projects. </a>
-
+]
 ---
 
 ## 1. Organization - Files
@@ -186,17 +187,27 @@ File / Folder Names should be:
 
 ---
 
-## 1. Organization Code Variables
+## 1. Organization - Code Variables
 
-* Use self explanatory variables names.
-* Comment code so your future self can follow.
+* Use self explanatory variable names.
+* Comment code so your future self can understand it.
 ---
 
-## 1. Organization Code Variables
+## 1. Organization - Code Variables
 
 .one-half[
 **More Readable**
 ```r
+# import canopy N values for
+# decid & coniferous forest sampling
+conifer.N <- read.csv("conifer-sampling.csv",
+                      header=TRUE,
+                      sep=",")
+
+decid.N <- read.csv("decid-sampling.csv",
+                    header=TRUE,
+                    sep=",")
+
 # Calc total forest N
 total.N <- conifer.N + decid.N
 
@@ -205,6 +216,14 @@ total.N <- conifer.N + decid.N
 .one-half[
 **Less Readable**
 ```r
+# import data
+sumA <- read.csv("sample1.csv",
+                      header=TRUE,
+                      sep=",")
+
+sumB <- read.csv("sample2.csv",
+                    header=TRUE,
+                    sep=",")
 sum <- sumA + sumB
 
 ```
@@ -213,7 +232,7 @@ sum <- sumA + sumB
 
 ## 1. Organization Pro-Tip
 
-> A variable name that describes the object is more useful than a random variable name.
+> A variable name that describes an object is more useful than a random variable name.
 
 ---
 
@@ -235,9 +254,13 @@ Document all workflow steps:
 
 ---
 
-## 2. Documentation
+## 2. Documentation - Code
 
-Code should be easy to understand with clear goals
+Code should be easy to understand with clear goals:
+
+---
+
+## 2. Documentation - Code
 
 > Document your code even if you think it's clear and simple. Your collaborators
 > & your future self will inevitably have an easier time working with it down the road.
@@ -262,22 +285,23 @@ Code should be easy to understand with clear goals
 
 ## Documentation Pro-Tip 4
 
-Use coding approaches that connect data cleaning, analysis & results
+> Use coding approaches that connect data cleaning, analysis & results
 
-> R Markdown and IPython / Jupyter notebooks allow you to publish code and results
+Example Tools: R Markdown and IPython / Jupyter notebooks allow you to publish code and results
 in one (or more) output files.
 ---
 
-## 2. Automation Pro-Tip
+## 2. Automation
 
-Scripting vs. Point and click
+Automate your workflows when possible by:
 
->  Script = more time spent up front, but will save time in the long run.
+* Using scripts vs. point & click approaches.
+* Using function-based coding vs. continuous code where tasks are repeated.
+* Developing scripted workflows rather than series of tasks (e.g. makefiles).
 
 ---
 
-## 2. Automation Pro-Tip
-Time Savings:
+## 2. Automation Benefits - Save Time
 
 * More efficient to modify and repeat an analysis down the road.
 * Easier for reviewers and colleagues to see even aspect of your methods.
@@ -285,25 +309,30 @@ Time Savings:
 
 ---
 
-## 2. Automation
+## 2. Automation Pro-Tip
 
-DRY -- Don't Repeat Yourself
+>  A script may mean more time spent up front, but will save time in the long run.
+
+---
+class: inverse, center, middle
+
+## DRY
+
+Don't Repeat Yourself
+
+---
+## 2. Automation - DRY
 
 > If your analysis is composed of scripts, with repeated code throughout, it will be more time consuming to maintain and update.
 
 <a href="http://reproducible-science-curriculum.github.io/2015-09-24-reproducible-science-duml/slides/01-automation-slides.html#9" target="_blank">Reproducible Science Curriculum - Automation</a>
 
 ---
+class: center, middle
 
-## Automation Tips
+## Automation - Create Modular Code
 
 Modularity -- use functions to write code in reusable chunks.
-
-* Variables created within a function are temporary.
-* Code with functions can be easier to read / cleaner.
-* Allows for better documentation.
-* Supports testing.
-* Allows for re-use of code on other data.
 
 ---
 class: center, middle
@@ -311,9 +340,18 @@ class: center, middle
 ![](/images/slide-shows/intro-rr/index.jpg)
 
 
+---
 
+## Automation - Functionalize
+
+* Variables created within a function are temporary.
+* Code with functions is easier to read / cleaner.
+* Supports better documentation.
+* Supports testing.
+* Allows for code re-use with other data.
 
 ---
+
 ## Dissemination
 
 > Publishing is not the end of your analysis, rather it is a way towards
@@ -331,27 +369,29 @@ class: center, middle
 
 ## Dissemination workflow
 
-Example Workflow / Tools (R focused):
+Example Workflow / Tools:
 
-
-
-* Document workflow: **R Markdown / Jupiter Notebooks**
+* Document workflow: **R Markdown / Jupyter Notebooks**
 * Collaborate with Colleagues / Version Control : **GitHub**
 * Publish Data Snapshot: **FigShare, Dryad, etc**
 * Share workflow: ** RPubs , IPython Notebook Viewer**
 
 ---
-## Four Facets of Reproducibility
+## Facets of Reproducibility - Tools / Skills
 
-_Some Reproducibility Tools & Skills_
-
-1. Documentation - RMarkdown / Jupyter Notebooks, GitHub
-2. Organization - File naming / organization.
-3. Automation - Code documentation, Efficient Coding
-4. Dissemination - GitHub, others...
+1. Documentation: RMarkdown / Jupyter Notebooks, GitHub
+2. Organization:  File naming / organization.
+3. Automation: Code documentation, Efficient Coding
+4. Dissemination: GitHub, Rpubs, ...
 
 ---
 name: inverse
 class: center, middle, inverse
 
-## The End
+## Improve This Presentation
+
+This presentation was created using markdown and built via jekyll / github.
+
+Suggest changes via a PR or an issue in the repo:
+<a href="https://github.com/lwasser/class-activities/blob/master/_slide-shows/1_intro-reprod-science.html" target="_blank">
+  View on GitHub </a>

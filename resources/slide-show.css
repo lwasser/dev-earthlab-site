@@ -20,6 +20,17 @@ img {
   max-width: 70%;
 }
 
+.wCaption-50 img {
+  max-height: 50%;
+  max-width: 50%;
+}
+
+ /* Add a Caption to an image */
+.caption {
+  font-size: .7em;
+  font-style: italic;
+}
+
 blockquote {
     background-color: #fff;
     border-radius: .3em;

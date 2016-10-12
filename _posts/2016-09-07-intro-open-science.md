@@ -34,14 +34,13 @@ efficient and productive scientific workflows
 ){: .btn .btn--large}
 </div>
 
-## Review this first
+## Intro to Reproducibility: Review First
 
-The material in the presentation below, will prepare you for the activity that
-we will participate in class. Please review the contents carefully.
+Please review the material below to prepare for class.
 
-[Introduction to Reproducible Science Slide Show ](https://github.com/NEON-WorkWithData/slide-shows/blob/gh-pages/intro-reprod-science.md){: .btn .btn--info}
+<a href="{{ site.basurl}}/slide-shows/1_intro-reprod-science/" class="btn btn--info" target="_blank">Introduction to Reproducible Science Slide Show </a>
 
-Special Thanks: This presentation was adapted from the reproducible science curriculum.
+> Special Thanks: This presentation was adapted from the reproducible science curriculum.
 Special thanks go out to: Francois Michonneau, Hilmar Lapp, Karen Cranston, Jenny Bryan,
 and others who contributed to creating this presentation.
 
@@ -57,10 +56,34 @@ questions:
 3. Do you have access to the data? What data are available and where / how were
 they collected?
 
+Next, work with your group to document ways in which you could improve upon the
+reproducibility of this project.
+
+1. Create a list of things that would make the working directory easier to work with.
+1. Break that list into general “areas” / categories of reproducibility.
+
+
+
 <!--
 {% for lesson in site.open-science %}
 <h3><a href="{{ lesson.url}}">{{ lesson.title }}</a></h3>
 {{ lesson.description }}
 
 {% endfor %}
+-->
+
+<!-- Testing out listing each collection set
+{% for issue in site.collections %}
+  <li>
+    <h6 class="post-meta">
+       {{ issue[1].label }}
+      {{ issue[3] }}
+      {{ issue[1].date | date: "%b %-d, %Y" }}
+    </h6>
+    <h2>
+      {{ issue[1].title }}
+    </h2>
+  </li>
+{% endfor %}
+
 -->

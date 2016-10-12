@@ -220,10 +220,16 @@ collections:
   open-science:
     output: true
     permalink: /:collection/:path/
+    title: Open Science
   slide-shows:
     output: true
+  issue_002:
+    output: true
+    permalink: /:title/:path
+    title: Talking Heads
+    date: 2015-08-01
 
 
 # Slideshow stuff
 # Format for the slides, can be either 16:9 or 4:3
-format: '16:9'
+format: '4:3'
