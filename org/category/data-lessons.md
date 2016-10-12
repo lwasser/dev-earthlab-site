@@ -2,7 +2,7 @@
 layout: post-by-category
 category: data-lessons
 title: "Data Lessons"
-permalink: /data-lessons/
+permalink: data-lessons/
 comments: false
 author_profile: true
 ---
