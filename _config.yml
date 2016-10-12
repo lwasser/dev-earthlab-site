@@ -221,9 +221,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   slide-shows:
-    output: false
+    output: true
 
 
 # Slideshow stuff
 # Format for the slides, can be either 16:9 or 4:3
-format: '4:3'
+format: '16:9'

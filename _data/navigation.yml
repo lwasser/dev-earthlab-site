@@ -23,5 +23,7 @@ open-science:
     children:
       - title: "Activity Overview"
         url: /data-lessons/intro-open-science/
-      - title: "Another Link"
-        url: /testWontWork
+      - title: "Intro to Reproducibility"
+        url: /open-science/1-intro/
+      - title: "Teaching Notes"
+        url: /open-science/2-instructor-notes/
