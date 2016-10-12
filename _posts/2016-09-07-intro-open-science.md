@@ -38,7 +38,7 @@ efficient and productive scientific workflows
 
 Please review the material below to prepare for class.
 
-<a href="{{ site.basurl}}/slide-shows/1_intro-reprod-science/" class="btn btn--info" target="_blank">Introduction to Reproducible Science Slide Show </a>
+<a href="{{ site.baseurl }}/slide-shows/1_intro-reprod-science/" class="btn btn--info" target="_blank">Introduction to Reproducible Science Slide Show </a>
 
 > Special Thanks: This presentation was adapted from the reproducible science curriculum.
 Special thanks go out to: Francois Michonneau, Hilmar Lapp, Karen Cranston, Jenny Bryan,
