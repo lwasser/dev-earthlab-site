@@ -40,7 +40,7 @@ Please review the material below to prepare for class.
 
 <a href="{{ site.baseurl }}/slide-shows/1_intro-reprod-science/" class="btn btn--info" target="_blank">Introduction to Reproducible Science Slide Show </a>
 
-<a href="{{ site.baseurl }}#" class="btn btn--info" target="_blank">More in File Naming</a>
+<a href="{{ site.baseurl }}/slide-shows/2-file-naming-jenny-bryan/" class="btn btn--info" target="_blank">File Naming 101</a>
 
 > Special Thanks: This presentation was adapted from the reproducible science curriculum.
 Special thanks go out to: Francois Michonneau, Hilmar Lapp, Karen Cranston, Jenny Bryan,
