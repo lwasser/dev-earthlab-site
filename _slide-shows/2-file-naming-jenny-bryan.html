@@ -1,12 +1,13 @@
 ---
 layout: slides
-title: 'Earth Lab Presentation'
+title: 'File Naming Conventions'
 author: [Jenny Bryan]
 ---
 
 ## Names matter
 
-![cheers](img/01-naming/cheers.png)
+![cheers](/images/slide-shows/intro-file-naming/cheers.png)
+Jenny Bryan - Reproducible Science Curriculum
 ---
 
 ## What works, what doesn't?
@@ -23,77 +24,83 @@ JW7d^(2sl@deletethisandyourcareerisoverWx2*.txt
 
 **YES**
 
-~~~
+```
 2014-06-08_abstract-for-sla.docx
 joes-filenames-are-getting-better.xlsx
 fig01_scatterplot-talk-length-vs-interest.png
 fig02_histogram-talk-attendance.png
 1986-01-28_raw-data-from-challenger-o-rings.txt
-~~~
+```
+
+---
 
 ## Three principles for (file) names
 
 1. Machine readable
-
 2. Human readable
-
 3. Plays well with default ordering
 
-## Awesome file names :)
+---
 
-![awesome_names](img/01-naming/awesome_names.png)
+## Good File Names
 
-# Machine readable
+![awesome_names](/images/slide-shows/intro-file-naming/awesome_names.png)
 
-## Machine readable
+---
 
-- Regular expression and globbing friendly
-    + Avoid spaces, punctuation, accented characters, case sensitivity
+## Machine readable names
 
-- Easy to compute on
-    + Deliberate use of delimiters
+Regular expression and globbing friendly
+* Avoid spaces, punctuation, accented characters, case sensitivity
 
-## Globbing
+Easy to compute on
+* Deliberate use of delimiters
 
-**Excerpt of complete file listing:**
+---
 
-![plasmid_names](img/01-naming/plasmid_names.png)
+## Globbing - Shell
 
-<hr>
+.one-half[
+**Complete file list:**
+![plasmid_names](/images/slide-shows/intro-file-naming/plasmid_names.png)
+]
 
-**Example of globbing to narrow file listing:**
+.one-half[
+**Narrow file list:**
+![plasmid_names](/images/slide-shows/intro-file-naming/plasmid_glob.png)
+]
 
-![plasmid_names](img/01-naming/plasmid_glob.png)
+---
 
+## Subset With Mac OS Finder Search
 
-## Same using Mac OS Finder search facilities
+![plasmid_mac_os_search](/images/slide-shows/intro-file-naming/plasmid_mac_os_search.png)
 
-<center>
-![plasmid_mac_os_search](img/01-naming/plasmid_mac_os_search.png)
-</center>
+---
+## Subset using R - regex
 
-## Same using regex in R
+![plasmid_regex](/images/slide-shows/intro-file-naming/plasmid_regex.png)
 
-<center>
-![plasmid_regex](img/01-naming/plasmid_regex.png)
-</center>
+---
 
-## Punctuation {.smaller}
+## Punctuation
 
 Deliberate use of `"-"` and `"_"` allows recovery of meta-data from the filenames:
 
 - `"_"` underscore used to delimit units of meta-data I want later
 - `"-"` hyphen used to delimit words so my eyes don't bleed
 
-<center>
-![plasmid_delimiters](img/01-naming/plasmid_delimiters.png)
-</center>
+![plasmid_delimiters](/images/slide-shows/intro-file-naming/plasmid_delimiters.png)
 
-<hr>
+---
+## Punctuation
 
-<center>
-![plasmid_delimiters_code](img/01-naming/plasmid_delimiters_code.png)
-</center>
+Deliberate use of `"-"` and `"_"` allows recovery of meta-data from the filenames:
+![plasmid_delimiters_code](/images/slide-shows/intro-file-naming/plasmid_delimiters_code.png)
+
+---
+
+## 
 
 This happens to be R but also possible in the shell, Python, etc.
 
@@ -123,13 +130,13 @@ This happens to be R but also possible in the shell, Python, etc.
 
 **Which set of file(name)s do you want at 3 a.m. before a deadline?**
 
-![human_readable_not_options](img/01-naming/human_readable_not_options.png)
+![human_readable_not_options](/images/slide-shows/intro-file-naming/human_readable_not_options.png)
 
 ## Embrace the slug
 
 <div class="columns-2">
-![slug_filenames](img/01-naming/slug_filenames.png)
-![slug](img/01-naming/slug.jpg)
+![slug_filenames](/images/slide-shows/intro-file-naming/slug_filenames.png)
+![slug](/images/slide-shows/intro-file-naming/slug.jpg)
 </div>
 
 ## Recap: Human readable
@@ -150,30 +157,30 @@ Easy to figure out what the heck something is, based on its name
 
 **Chronological order:**
 
-![chronological_order](img/01-naming/chronological_order.png)
+![chronological_order](/images/slide-shows/intro-file-naming/chronological_order.png)
 
 <hr>
 
 **Logical order:** Put something numeric first
 
-![logical_order](img/01-naming/logical_order.png)
+![logical_order](/images/slide-shows/intro-file-naming/logical_order.png)
 
 ## Dates
 
 Use the ISO 8601 standard for dates: YYYY-MM-DD
 
-![chronological_order](img/01-naming/chronological_order.png)
+![chronological_order](/images/slide-shows/intro-file-naming/chronological_order.png)
 
 ##
 
 <center>
-![iso_psa](img/01-naming/iso_8601.tiff)
+![iso_psa](/images/slide-shows/intro-file-naming/iso_8601.tiff)
 </center>
 
 ## Comprehensive map of all countries in the world that use the MM-DD-YYYY format
 
 <center>
-![map_mmddyyy](img/01-naming/map_mmddyyy.tiff)
+![map_mmddyyy](/images/slide-shows/intro-file-naming/map_mmddyyy.tiff)
 </center>
 
 <br>
@@ -183,7 +190,7 @@ From https://twitter.com/donohoe/status/597876118688026624.
 ## Left pad other numbers with zeros
 
 <center>
-![logical_order](img/01-naming/logical_order.png)
+![logical_order](/images/slide-shows/intro-file-naming/logical_order.png)
 </center>
 
 <br>
@@ -224,8 +231,8 @@ which is just sad :(
 
 ## Go forth and use awesome file names :)
 
-![chronological_order](img/01-naming/chronological_order.png)
+![chronological_order](/images/slide-shows/intro-file-naming/chronological_order.png)
 
 <br>
 
-![logical_order](img/01-naming/logical_order.png)
+![logical_order](/images/slide-shows/intro-file-naming/logical_order.png)

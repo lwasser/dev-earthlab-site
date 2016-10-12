@@ -30,7 +30,13 @@ layout: true
     slideNumberFormat: function (current, total) {
       return '<span class="progressbar"><span class="step' + Math.round(current/total*11-1) + '">&nbsp;</span></span>';
     },
-    countIncrementalSlides: false
+    // Customize slide number label, either using a format string..
+    slideNumberFormat: 'Slide %current% of %total%',
+    // .. or by using a format function
+    slideNumberFormat: function (current, total) {
+      return current + ' / ' + total;
+    },
+    countIncrementalSlides: true
   });
   </script>
 </body>

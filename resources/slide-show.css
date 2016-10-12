@@ -210,3 +210,9 @@ code {
 .full-width {
   width: 100%;
 }
+
+
+
+.remark-slide-number {
+  font-size: .5em;
+}

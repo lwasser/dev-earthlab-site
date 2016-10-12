@@ -30,7 +30,7 @@ efficient and productive scientific workflows
 
 **Estimated Time:** 1-2 hours
 
-[Download Lesson Data](https://ndownloader.figshare.com/files/6433086
+[Download Lesson Data](https://ndownloader.figshare.com/files/6463767
 ){: .btn .btn--large}
 </div>
 
@@ -39,6 +39,8 @@ efficient and productive scientific workflows
 Please review the material below to prepare for class.
 
 <a href="{{ site.baseurl }}/slide-shows/1_intro-reprod-science/" class="btn btn--info" target="_blank">Introduction to Reproducible Science Slide Show </a>
+
+<a href="{{ site.baseurl }}#" class="btn btn--info" target="_blank">More in File Naming</a>
 
 > Special Thanks: This presentation was adapted from the reproducible science curriculum.
 Special thanks go out to: Francois Michonneau, Hilmar Lapp, Karen Cranston, Jenny Bryan,
@@ -61,6 +63,13 @@ reproducibility of this project.
 
 1. Create a list of things that would make the working directory easier to work with.
 1. Break that list into general “areas” / categories of reproducibility.
+
+
+## Resources
+
+* <a href="http://r-pkgs.had.co.nz/style.html" target="_blank">Hadley Wickham's Style Guide</a>
+* <a href="https://blog.goyello.com/2013/05/17/express-names-in-code-bad-vs-clean/" target="_blank">BLOG: Bad vs Good Code Naming Conventions</a>
+
 
 
 
