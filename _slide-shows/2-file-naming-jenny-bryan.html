@@ -6,7 +6,7 @@ author: [Jenny Bryan]
 
 ## Names matter
 
-![cheers](/images/slide-shows/intro-file-naming/cheers.png)
+![cheers]({{ site.baseurl }}/images/slide-shows/intro-file-naming/cheers.png)
 Jenny Bryan - Reproducible Science Curriculum
 ---
 
@@ -44,7 +44,7 @@ fig02_histogram-talk-attendance.png
 
 ## Good File Names
 
-![awesome_names](/images/slide-shows/intro-file-naming/awesome_names.png)
+![awesome_names]({{ site.baseurl }}/images/slide-shows/intro-file-naming/awesome_names.png)
 
 ---
 
@@ -62,24 +62,24 @@ Easy to compute on
 
 .one-half[
 **Complete file list:**
-![plasmid_names](/images/slide-shows/intro-file-naming/plasmid_names.png)
+![plasmid_names]({{ site.baseurl }}/images/slide-shows/intro-file-naming/plasmid_names.png)
 ]
 
 .one-half[
 **Narrow file list:**
-![plasmid_names](/images/slide-shows/intro-file-naming/plasmid_glob.png)
+![plasmid_names]({{ site.baseurl }}/images/slide-shows/intro-file-naming/plasmid_glob.png)
 ]
 
 ---
 
 ## Subset With Mac OS Finder Search
 
-![plasmid_mac_os_search](/images/slide-shows/intro-file-naming/plasmid_mac_os_search.png)
+![plasmid_mac_os_search]({{ site.baseurl }}/images/slide-shows/intro-file-naming/plasmid_mac_os_search.png)
 
 ---
 ## Subset using R - regex
 
-![plasmid_regex](/images/slide-shows/intro-file-naming/plasmid_regex.png)
+![plasmid_regex]({{ site.baseurl }}/images/slide-shows/intro-file-naming/plasmid_regex.png)
 
 ---
 
@@ -90,149 +90,180 @@ Deliberate use of `"-"` and `"_"` allows recovery of meta-data from the filename
 - `"_"` underscore used to delimit units of meta-data I want later
 - `"-"` hyphen used to delimit words so my eyes don't bleed
 
-![plasmid_delimiters](/images/slide-shows/intro-file-naming/plasmid_delimiters.png)
+![plasmid_delimiters]({{ site.baseurl }}/images/slide-shows/intro-file-naming/plasmid_delimiters.png)
 
 ---
 ## Punctuation
 
 Deliberate use of `"-"` and `"_"` allows recovery of meta-data from the filenames:
-![plasmid_delimiters_code](/images/slide-shows/intro-file-naming/plasmid_delimiters_code.png)
+![plasmid_delimiters_code]({{ site.baseurl }}/images/slide-shows/intro-file-naming/plasmid_delimiters_code.png)
+
+---
+class: center, middle
+
+Previously are R but also possible in the shell, Python, etc.
 
 ---
 
-## 
+## se Machine Readable Names
 
-This happens to be R but also possible in the shell, Python, etc.
+- Easy to search for files later.
+- Easy to narrow file lists based on names.
+- Easy to extract info from file names, e.g. by splitting.
 
-## Recap: machine readable
+---
 
-- Easy to search for files later
+## Recap: Use Machine Readable Names
 
-- Easy to narrow file lists based on names
+New to regular expressions and globbing? Be kind to yourself and avoid
 
-- Easy to extract info from file names, e.g. by splitting
+* Spaces in file names
+* Punctuation
+* Accented characters
+* Different files named `foo` and `Foo`
 
-- New to regular expressions and globbing? be kind to yourself and avoid
-    + Spaces in file names
-    + Punctuation
-    + Accented characters
-    + Different files named `foo` and `Foo`
-
-# Human readable
+---
 
 ## Human readable
 
-- Name contains info on content
+* Name contains info on content
+* Connects to concept of a *slug* from semantic URLs
 
-- Connects to concept of a *slug* from semantic URLs
+---
 
 ## Example
 
 **Which set of file(name)s do you want at 3 a.m. before a deadline?**
 
-![human_readable_not_options](/images/slide-shows/intro-file-naming/human_readable_not_options.png)
+![human_readable_not_options]({{ site.baseurl }}/images/slide-shows/intro-file-naming/human_readable_not_options.png)
 
-## Embrace the slug
+---
+class: center, middle
 
-<div class="columns-2">
-![slug_filenames](/images/slide-shows/intro-file-naming/slug_filenames.png)
-![slug](/images/slide-shows/intro-file-naming/slug.jpg)
-</div>
-
+.one-half[
+![slug_filenames]({{ site.baseurl }}/images/slide-shows/intro-file-naming/slug_filenames.png)
+]
+.one-half[
+![slug]({{ site.baseurl }}/images/slide-shows/intro-file-naming/slug.jpg)
+]
+---
 ## Recap: Human readable
 
-Easy to figure out what the heck something is, based on its name
+Easy to figure out what something is, based on its name
 
-# Plays well with default ordering
+* Plays well with default ordering
+  - Put something numeric first
+  - Use the ISO 8601 standard for dates
+  - Left pad other numbers with zeros
 
-## Plays well with default ordering
+---
 
-- Put something numeric first
+## Example - Chronological order:
 
-- Use the ISO 8601 standard for dates
+![chronological_order]({{ site.baseurl }}/images/slide-shows/intro-file-naming/chronological_order.png)
 
-- Left pad other numbers with zeros
+---
 
-## Examples
+## Example - Logical order:
+*Put something numeric first*
 
-**Chronological order:**
+![logical_order]({{ site.baseurl }}/images/slide-shows/intro-file-naming/logical_order.png)
 
-![chronological_order](/images/slide-shows/intro-file-naming/chronological_order.png)
-
-<hr>
-
-**Logical order:** Put something numeric first
-
-![logical_order](/images/slide-shows/intro-file-naming/logical_order.png)
-
+---
 ## Dates
 
 Use the ISO 8601 standard for dates: YYYY-MM-DD
 
-![chronological_order](/images/slide-shows/intro-file-naming/chronological_order.png)
+![chronological_order]({{ site.baseurl }}/images/slide-shows/intro-file-naming/chronological_order.png)
 
-##
+---
+class: middle, center
 
-<center>
-![iso_psa](/images/slide-shows/intro-file-naming/iso_8601.tiff)
-</center>
+![iso_psa]({{ site.baseurl }}/images/slide-shows/intro-file-naming/iso_8601.tiff)
 
-## Comprehensive map of all countries in the world that use the MM-DD-YYYY format
+---
+class: center, middle
+## Countries that use MM-DD-YYYY format
 
-<center>
-![map_mmddyyy](/images/slide-shows/intro-file-naming/map_mmddyyy.tiff)
-</center>
 
-<br>
+![map graphic ]({{ site.baseurl }}/images/slide-shows/intro-file-naming/map-mmddyyyy.png)
 
+.caption[
 From https://twitter.com/donohoe/status/597876118688026624.
+]
 
-## Left pad other numbers with zeros
+---
 
-<center>
-![logical_order](/images/slide-shows/intro-file-naming/logical_order.png)
-</center>
 
-<br>
+.one-half[
+Left pad numbers with zeros:
+```xml
+01_marshal-data.r
+02_pre-dea-filtering.r
+03_dea-with-limma-voom.
+90_limma-model-term-name-incident.r
+happen01_a-file.txt
+happen02_viz-file.txt
 
+```
+
+]
+
+.one-half[
 If you don’t left pad, you get this:
 
-~~~
+```xml
 10_final-figs-for-publication.R
 1_data-cleaning.R
 2_fit-model.R
-~~~
+```
 
 which is just sad :(
+]
+---
 
-## Recap: Plays well with default ordering
-
-- Put something numeric first
-
-- Use the ISO 8601 standard for dates
-
-- Left pad other numbers with zeros
-
-## Recap
-
-## Three principles for (file) names
+## Recap - Three principles for (file) names
 
 1. Machine readable
-
 2. Human readable
-
 3. Plays well with default ordering
 
-## Pros
+---
+
+## Recap: Names Play Well With Default Ordering
+
+- Put something numeric first
+- Use the ISO 8601 standard for dates
+- Left pad other numbers with zeros
+
+---
+## Benefits
 
 - Easy to implement NOW
-
 - Payoffs accumulate as your skills evolve and projects get more complex
 
-## Go forth and use awesome file names :)
+---
+class: inverse, middle
 
-![chronological_order](/images/slide-shows/intro-file-naming/chronological_order.png)
+## Go forth and use awesome file names!
 
-<br>
+![chronological_order]({{ site.baseurl }}/images/slide-shows/intro-file-naming/chronological_order.png)
 
-![logical_order](/images/slide-shows/intro-file-naming/logical_order.png)
+---
+class: inverse, middle
+
+## Go forth and use awesome file names!
+
+![logical_order]({{ site.baseurl }}/images/slide-shows/intro-file-naming/logical_order.png)
+
+---
+name: inverse
+class: center, middle, inverse
+
+## Improve This Presentation
+
+This presentation was created using markdown and built via jekyll / github.
+
+Suggest changes via a PR or an issue in the repo:
+<a href="https://github.com/lwasser/class-activities/blob/master/_slide-shows/2-file-naming-jenny-bryan.html" target="_blank">
+  View on GitHub </a>
