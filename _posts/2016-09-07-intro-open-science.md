@@ -64,11 +64,26 @@ reproducibility of this project.
 1. Create a list of things that would make the working directory easier to work with.
 1. Break that list into general “areas” / categories of reproducibility.
 
+<div class="notice--info" markdown="1">
+# Resources
 
-## Resources
-
+### Clean Coding
 * <a href="http://r-pkgs.had.co.nz/style.html" target="_blank">Hadley Wickham's Style Guide</a>
 * <a href="https://blog.goyello.com/2013/05/17/express-names-in-code-bad-vs-clean/" target="_blank">BLOG: Bad vs Good Code Naming Conventions</a>
+
+### Reproducibility
+* <a href="http://science.sciencemag.org/content/334/6060/1226" target="_blank">Peng (2011) - Reproducible Research in Computational Science</a>
+* <a href="http://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0850-7" target="_blank">Markowetz (2015) - Five selfish reasons to work reproducibly
+</a>
+* <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0026828" target="_blank">Wicherts (2011) - Willingness to Share Research Data Is Related to the Strength of the Evidence and the Quality of Reporting of Statistical Results
+</a>
+
+### Organization
+
+* <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424" target="_blank">Noble (2009) - A Quick Guide to Organizing Computational Biology Projects
+</a>
+</div>
+
 
 
 
