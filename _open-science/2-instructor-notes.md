@@ -10,7 +10,7 @@ comments: false
 
 ## About
 This lesson challenges students to critically think about good file and process
- management and organization in support of reproducible open science.
+management and organization in support of reproducible open science.
 
  <div class='notice--success' markdown="1">
 
@@ -28,7 +28,39 @@ activity.
 ){: .btn .btn--large}
 </div>
 
- ## The Scenario
+## Activity Overview
+
+| Time (Mins)  |Topic   |
+|---|---|---|---|---|
+|  10 | Intro to Reproducibility   |
+|  25 | Group Work - Identify issues   |
+|  20 | Discuss Issues  |
+| 05 | Wrap up / Survey |
+
+
+## First 10 Minutes
+
+- Introduction to Reproducibility
+- Definition
+- Story about some element where it would have been helpful
+
+**Four Facets**
+
+* Organization
+* Documentation
+* Automation
+* Dissemination
+
+**Why It Makes Science Better**
+
+* Laziness
+* Help out your future self
+* Contribute to building upon research efforts
+* Error checking
+
+List any other reasons / motivation for it.
+
+## The Scenario
 
  You are in a lab and a colleague has moved on to a new job and left you their
  research which you are tasked by your supervisor with picking up and moving forward.
