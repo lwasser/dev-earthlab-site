@@ -24,6 +24,8 @@ open-science:
       - title: "Activity Overview"
         url: /data-lessons/intro-open-science/
       - title: "Intro to Reproducibility"
-        url: /open-science/1-intro/
+        url: https://lwasser.github.io/class-activities/slide-shows/1_intro-reprod-science/#1
+      - title: "File Naming 101"
+        url: https://lwasser.github.io/class-activities/slide-shows/1_intro-reprod-science/#1
       - title: "Teaching Notes"
         url: /open-science/2-instructor-notes/

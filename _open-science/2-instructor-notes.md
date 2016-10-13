@@ -19,8 +19,9 @@ This lesson challenges students to critically think about good file and process
 Students should review the following presentation PRIOR to participating in the
 activity.
 
-* [Introduction to Reproducible Science](https://github.com/NEON-WorkWithData/slide-shows/blob/gh-pages/intro-reprod-science.md).
-* Another resource??
+<a href="{{ site.baseurl }}/slide-shows/1_intro-reprod-science/" class="btn btn--info" target="_blank">Introduction to Reproducible Science Slide Show </a>
+
+<a href="{{ site.baseurl }}/slide-shows/2-file-naming-jenny-bryan/" class="btn btn--info" target="_blank">File Naming 101</a>
 
 
 [Download Lesson Data](https://ndownloader.figshare.com/files/6433086
@@ -85,13 +86,15 @@ Some of the problems within this directory include:
     * Dealing with dates in Excel (DANGER)
     * Units for values?
     * Where is metadata?
+    * Using colors rather than machine readible column flags
+    * Multiple tabs
+
+There are more issues with the repo that participants will find.
 
 
 
-
-    ## About This Lesson
-    This lesson was originally taught as part of the [NEON Data Science Institute
-    2016](http://neon-workwithdata.github.io/neon-data-institute-2016/) by
-    [Naupaka Zimmerman](https://github.com/naupaka). The data and files are
-    for the most part derived from various NEON remote sensing data
-    products from the D17 California field sites.
+## About This Lesson
+This lesson was originally taught as part of the [NEON Data Institute 2016](http://neon-workwithdata.github.io/neon-data-institute-2016/) by
+[Naupaka Zimmerman](https://github.com/naupaka). The data and files are
+for the most part derived from various NEON remote sensing data
+products from the D17 California field sites.
