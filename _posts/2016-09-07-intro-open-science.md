@@ -1,6 +1,6 @@
 ---
 layout: single
-authors: [Leah A. Wasser, Naupaka Zimmerman]
+authors: [Naupaka Zimmerman, Leah A. Wasser, Reproducible Science Curriculum Community]
 category: [data-lessons]
 title: 'Open Science Data Intensive University Classroom Activity'
 excerpt: 'A hands-on activity where students review a project for readability,
@@ -70,12 +70,17 @@ reproducibility of this project.
 ### Clean Coding
 * <a href="http://r-pkgs.had.co.nz/style.html" target="_blank">Hadley Wickham's Style Guide</a>
 * <a href="https://blog.goyello.com/2013/05/17/express-names-in-code-bad-vs-clean/" target="_blank">BLOG: Bad vs Good Code Naming Conventions</a>
+* <a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882" target="_blank">BOOK: Clean Code: A Handbook of Agile Software Craftsmanship 1st Edition</a>
+
 
 ### Reproducibility
 * <a href="http://science.sciencemag.org/content/334/6060/1226" target="_blank">Peng (2011) - Reproducible Research in Computational Science</a>
 * <a href="http://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0850-7" target="_blank">Markowetz (2015) - Five selfish reasons to work reproducibly
 </a>
 * <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0026828" target="_blank">Wicherts (2011) - Willingness to Share Research Data Is Related to the Strength of the Evidence and the Quality of Reporting of Statistical Results
+</a>
+* <a href="http://link.springer.com/article/10.1007/s10816-015-9272-9
+" target="_blank">Marwick (2016) - Computational Reproducibility in Archaeological Research: Basic Principles and a Case Study of Their Implementation
 </a>
 
 ### Organization
