@@ -27,25 +27,25 @@ layout: default
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header>
           {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
-          {% if page.authors %}
-            <div class="page__meta">
-              {% for anAuthor in page.authors %}
-              {% assign currentItem = site.data.authors | where:"name", anAuthor %}
-              <a href="authors/{{ currentItem[0].slug }}">{{ currentItem[0].name }}</a>
-              {% if forloop.last == false %}, {% endif %}
-              {% endfor %}
-            </div>
-        {% endif %}
-
-          {% comment %}{% if page.read_time %}
+          {% if page.read_time %}
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
-          {% endif %}{% endcomment %}
+          {% endif %}
         </header>
       {% endunless %}
 
       <section class="page__content" itemprop="text">
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label }}</a></div>{% endif %}
+
+        <!-- List all posts in the page category  -->
+        {% for post in site.posts %}
+          {% if post.authors contains page.author %}
+          <h3><a href="{{ post.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+          {{ post.excerpt }}
+        {% endif %}
+        {% endfor %}
+
+
       </section>
 
       <footer class="page__meta">

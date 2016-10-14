@@ -1,6 +1,6 @@
 ---
 layout: single
-author: [Leah A. Wasser, Maxwell Joseph]
+authors: [Leah A. Wasser, Maxwell Joseph]
 category: [tutorials]
 title: 'Code Tutorial'
 excerpt: 'About this tutorial...'
@@ -10,28 +10,14 @@ author_profile: false
 comments: false
 ---
 
-{% for author in site.data.authors %}
-{{ author.name }}{{ author.slug }}
-{% endfor %}
 
-
-New stuff
-
-{% assign author =  site.data.authors.[page.author] %}
-{{ author }}
-
-
-The Authors
-{% for anAuthor in page.author %}
-{{ anAuthor }}
-{% assign author =  site.data.authors.[anAuthor] %}
-{{ author }}
-{{ author.slug }}
-{% endfor %}
+## The Authors
 
 
 
-Code tutorial stuff here
+
+
+## Code tutorial stuff here
 
 ```r
 # Code
