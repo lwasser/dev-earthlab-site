@@ -4,16 +4,16 @@ title                    : "Earth Lab Resources"
 title_separator          : "-"
 name                     : "Earth Analytics"
 description              : "Code, tutorials, and tools for modern Earth analytics"
-url                      : "https://lwasser.github.io"
-baseurl                  : "/class-activities"
+url                      : "https://earthlab.github.io"
+baseurl                  : "/dev-earthlab-site"
 gh_repo                  :
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "disqus"
+  provider               :
   disqus:
-    shortname            : "earthlabcu"
+    shortname            :
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
