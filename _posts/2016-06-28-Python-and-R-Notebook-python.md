@@ -1,6 +1,6 @@
 ---
 author: Matt Oakley
-category: python
+category: [tutorials]
 layout: single
 tags:
 - rpy2.robjects

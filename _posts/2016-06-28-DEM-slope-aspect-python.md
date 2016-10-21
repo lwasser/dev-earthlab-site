@@ -1,6 +1,6 @@
 ---
 author: Matt Oakley
-category: python
+category: [tutorials]
 layout: single
 tags:
 - math
@@ -15,7 +15,7 @@ title: Calculating slope and aspect from a digital elevation model in Python
 
 
 
-Digital elevation models (DEM) provide a representaion of surface topography (elevation) in two dimensional space. DEMs are a 3D representaion of a terrain's surface such as the Earth. Typically, DEM data can be represented as a raster which is most easily expressed as being a 2D array with each individual cell having an elevation associated with it. 
+Digital elevation models (DEM) provide a representaion of surface topography (elevation) in two dimensional space. DEMs are a 3D representaion of a terrain's surface such as the Earth. Typically, DEM data can be represented as a raster which is most easily expressed as being a 2D array with each individual cell having an elevation associated with it.
 
 With this data, we are able to use programs in order to analyze certain physical aspects about the area associated with the data. This tutorial will go over how we compute the **slope** and **aspect** of an area using DEM data.
 
@@ -67,7 +67,7 @@ filename = '../data/front_range_dem.tif'
 def getResolution(rasterfn):
     raster = gdal.Open(rasterfn)
     geotransform = raster.GetGeoTransform()
-    res = {"east-west": abs(geotransform[1]), 
+    res = {"east-west": abs(geotransform[1]),
            "north-south": abs(geotransform[5])}
     return res
 
@@ -110,14 +110,14 @@ Now that we've read in the DEM data and converted it to a 2D NumPy array, we're 
 
     a | b | c
     ----------
-    d | e | f 
+    d | e | f
     ----------
     g | h | q
 
 Where 'e' is the current focal cell whose slope is to be calculated.
-    
+
 We can calculate the slope for that specific cell algorithmically via the following equations:
-    
+
 $$\dfrac{dz}{dx} = ((c + 2f + q) - (a + 2d + g)) / (8 r_x)$$
 
 $$\dfrac{dz}{dy} = ((g + 2h + q) - (a + 2b + c)) / (8 r_y)$$
@@ -169,23 +169,23 @@ for i in range(1, num_rows - 1):
         g = data_array[i + 1][j - 1]
         h = data_array[i + 1][j]
         q = data_array[i + 1][j + 1]
-        
+
         vals = [a, b, c, d, e, f, g, h, q]
-        
+
         if nodataval in vals:
             all_present = False
         else:
             all_present = True
-                        
+
         if all_present == True:
             dz_dx = (c + (2 * f) + q - a - (2 * d) - g) / (8 * resolution['east-west'])
             dz_dy = (g + (2 * h) + q - a - (2 * b) - c) / (8 * resolution['north-south'])
             dz_dx_sq = math.pow(dz_dx, 2)
             dz_dy_sq = math.pow(dz_dy, 2)
-            
+
             rise_run = math.sqrt(dz_dx_sq + dz_dy_sq)
             slope_array[i][j] = math.atan(rise_run) * 57.29578
-            
+
             aspect = math.atan2(dz_dy, (-1 * dz_dx)) * 57.29578
             if aspect < 0:
                 aspect_array[i][j] = 90 - aspect
@@ -218,8 +218,8 @@ plt.show()
 
 ```python
 #Set up the colors and colorbar associated with the slope visualization
-color_map = ListedColormap(['white', 'darkgreen', 'green', 'limegreen', 'lime', 
-                            'greenyellow', 'yellow', 'gold', 
+color_map = ListedColormap(['white', 'darkgreen', 'green', 'limegreen', 'lime',
+                            'greenyellow', 'yellow', 'gold',
                             'orange', 'orangered', 'red'])
 
 # range begins at negative value so that missing values are white

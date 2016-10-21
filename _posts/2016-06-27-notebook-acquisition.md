@@ -1,6 +1,6 @@
 ---
 author: Matt Oakley
-category: blogposts
+category: [tutorials]
 layout: single
 title: Acquiring tutorials from GitHub
 ---

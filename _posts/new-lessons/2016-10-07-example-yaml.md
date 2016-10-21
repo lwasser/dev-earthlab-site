@@ -1,16 +1,15 @@
 ---
 layout: single
-title: 'Using R and Python in the same Jupyter Notebook'
-authors: [Matt Oakley]
+title: 'Title in Single Quotes'
+authors: [Matt Oakley, Author Two]
 category: [tutorials]
-excerpt: 'About this tutorial...'
+excerpt: 'Please write 1-3 sentence exerpt summarizing the tutorial here. '
 sidebar:
   nav:
 author_profile: false
-comments: false
+comments: true
 lang: [r, python]
 lib: [base, rpy2, h5py]
-
 ---
 
 

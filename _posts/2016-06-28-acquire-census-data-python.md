@@ -1,6 +1,6 @@
 ---
 author: Zach Schira
-category: python
+category: [tutorials]
 layout: single
 tags:
 - cenpy
@@ -20,7 +20,7 @@ This tutorial outlines the use of the Cenpy package to search for, and acquire s
 - Search for desired census data
 - Download and store data
 
-## Dependencies 
+## Dependencies
 The Cenpy package depends on pandas and [requests](http://docs.python-requests.org/en/master/). Ensure that python and pip are already properly installed then use the following commands to install cenpy.
 
 
@@ -39,7 +39,7 @@ import pysal
 ```
 
 ## Finding Data
-The cenpy explorer module allows you to view all of the available [United States Census Bureau API's](http://www.census.gov/data/developers/data-sets.html). 
+The cenpy explorer module allows you to view all of the available [United States Census Bureau API's](http://www.census.gov/data/developers/data-sets.html).
 
 
 ```python

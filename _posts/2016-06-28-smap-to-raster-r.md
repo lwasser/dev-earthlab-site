@@ -1,6 +1,7 @@
 ---
 author: Zach Schira
-category: r
+lang: r
+category: [tutorials]
 layout: single
 tags:
 - raster
@@ -85,7 +86,7 @@ h5f&'Geophysical_Data'#Print out all datasets in the geophysical data group
 
 ## Creating Raster from h5
 
-The next step is define the datasets you would like to analyze, this example will use 'sm_rootzone' and 'heat_flux_ground' data. 
+The next step is define the datasets you would like to analyze, this example will use 'sm_rootzone' and 'heat_flux_ground' data.
 
 From here you can read in each dataset and create a raster layer from the data. These raster layers eventually be 'stacked' together to create the final raster stack.
 
@@ -128,12 +129,12 @@ The `stack()` function takes a list of raster ojects as an argument and creates 
 ```R
 # create raster stack
 smap_stack <-stack(list_of_rasters)
-# define layer names 
+# define layer names
 for (i in 1:num_sets) {
     names(smap_stack)[i]<-data_to_read[[i]]
 }
 # save raster stack to a geotiff file
-writeRaster(smap_stack,'smap_stack.tif', format = 'GTiff', 
+writeRaster(smap_stack,'smap_stack.tif', format = 'GTiff',
             overwrite=TRUE)
 ```
 

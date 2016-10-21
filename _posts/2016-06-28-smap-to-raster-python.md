@@ -1,6 +1,7 @@
 ---
 author: Matt Oakley
-category: python
+category: [tutorials]
+lang: python
 layout: single
 tags:
 - ftplib
@@ -14,10 +15,10 @@ title: HDF5 to Raster Tutorial with Python
 
 
 
-The National Snow and Ice Data Center hosts soil moisture data (from the NASA Soil Moisture Active Passive project, described [here](https://nsidc.org/data/smap), and hereafter referred to as SMAP) which is provided in .h5 format. HDF5 is a "hierarchical" data format, with multiple groups and datasets (further explained in Step 2) which are useful for storing and organizing large amounts of data. While this format is great for the large amount of data being collected, we often want to utilize a single dataset within the file. 
+The National Snow and Ice Data Center hosts soil moisture data (from the NASA Soil Moisture Active Passive project, described [here](https://nsidc.org/data/smap), and hereafter referred to as SMAP) which is provided in .h5 format. HDF5 is a "hierarchical" data format, with multiple groups and datasets (further explained in Step 2) which are useful for storing and organizing large amounts of data. While this format is great for the large amount of data being collected, we often want to utilize a single dataset within the file.
 
 This tutorial demonstrates how to access SMAP data, and how to generate raster output from an HDF5 file. A raster is a two dimensional array, with each element in the array containing a specific value. In this case, the two dimensions correspond to longitude and latitude, and the elements or values represent soil moisture.
-    
+
 ## Objectives
 
 1. Read in SMAP data file (in .h5 format)
@@ -57,7 +58,7 @@ from osgeo import osr
 print(sys.version)
 ```
 
-    2.7.11 |Anaconda 4.0.0 (x86_64)| (default, Dec  6 2015, 18:57:58) 
+    2.7.11 |Anaconda 4.0.0 (x86_64)| (default, Dec  6 2015, 18:57:58)
     [GCC 4.2.1 (Apple Inc. build 5577)]
 
 
@@ -95,7 +96,7 @@ The following chunk of code prints the datasets within the "Geophysical_Data" gr
 
 ```python
 file_path = 'SMAP_L4_SM_gph_20150331T013000_Vb1010_001.h5'
-h5file = h5py.File(file_path, 'r') 
+h5file = h5py.File(file_path, 'r')
 
 which_group = 'Geophysical_Data'
 group = h5file.get(which_group)
@@ -121,38 +122,38 @@ print datasets
      u'sm_rootzone_pctl' u'net_downward_shortwave_flux' u'soil_temp_layer2']
 
 
-Each element in this array represents a different Dataset contained in the group `Geophysical_Data`. We will work with `sm_surface_wetness`, `soil_temp_layer2` in this tutorial. 
+Each element in this array represents a different Dataset contained in the group `Geophysical_Data`. We will work with `sm_surface_wetness`, `soil_temp_layer2` in this tutorial.
 
 # Step 3: Using our data to create a Raster
 
 Now that we've decided which group(s) and dataset(s) we wish to use we need to create a raster object from the data. Because we are interested in two different datasets, we will extract both and subsequently "stack" them on top of one another.
 
-The following code chunk defines a function `smap2raster`, which we use for the generation of rasters from specific datasets in the SMAP data file. 
+The following code chunk defines a function `smap2raster`, which we use for the generation of rasters from specific datasets in the SMAP data file.
 
 
 ```python
 def smap2raster(inputFile, group, dataset):
     """Converts SMAP data to a Raster object
-Input:  
+Input:
     inputFile - SMAP data file
     group - The groupt containing the dataset we want to pull data from
     dataset - Which specific dataset we want to pull data from
-Output: 
+Output:
     A raster image in .tif format, saved to the current working directory
     """
     #Read in the SMAP file in h5 format
     h5File = h5py.File(inputFile, 'r')
-    
+
     #Get the data from the specific group/dataset
     data = h5File.get(group + '/' + dataset)
     lat = h5File.get('cell_lat')
     lon = h5File.get('cell_lon')
-    
+
     #Convert this data into numpy arrays
     np_data = np.array(data)
     np_lat = np.array(lat)
     np_lon = np.array(lon)
-    
+
     #Get the spatial extents of the data
     num_cols = float(np_data.shape[1])
     num_rows = float(np_data.shape[0])
@@ -162,17 +163,17 @@ Output:
     ymax = np_lat.max()
     xres = (xmax - xmin)/num_cols
     yres = (ymax - ymin)/num_rows
-    
+
     #Set up the transformation necessary to create the raster
     geotransform = (xmin, xres, 0, ymax, 0, -yres)
-    
+
     #Create the raster object with the proper coordinate encoding and geographic transformation
     driver = gdal.GetDriverByName('GTiff')
     raster = driver.Create(dataset+'Raster.tif', int(num_cols), int(num_rows), 1, gdal.GDT_Float32)
     raster.SetGeoTransform(geotransform)
     srs = osr.SpatialReference()
     srs.ImportFromEPSG(4326)
-    
+
     #Export and write the data array to the raster
     raster.SetProjection( srs.ExportToWkt() )
     raster.GetRasterBand(1).WriteArray(np_data)

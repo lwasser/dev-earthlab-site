@@ -1,7 +1,8 @@
 ---
 layout: single
 authors: [Naupaka Zimmerman, Leah A. Wasser, Reproducible Science Curriculum Community]
-category: [data-lessons]
+category: [tutorials]
+tags: [class-lesson]
 title: 'Open Science Data Intensive University Classroom Activity'
 excerpt: 'A hands-on activity where students review a project for readability,
 organization, etc and identify key elements that would make it more usable and

@@ -1,6 +1,6 @@
 ---
 author: Zach Schira
-category: r
+category: [tutorials]
 layout: single
 tags:
 - raster
@@ -13,7 +13,7 @@ title: Project SMAP data onto Landsat data in R
 
 
 
-The National Snow and Ice Data Center hosts soil moisture data (from the NASA Soil Moisture Active Passive project, described [here](https://nsidc.org/data/smap), and hereafter referred to as SMAP). An important skill for analyzing the SMAP data is the ability to re-project the spatial data to spatial data collected from seperate sources, and covering different spatial extents. One such data source is the joint U.S. Geological Services (USGS) and NASA [Landsat Project](http://landsat.usgs.gov//about_project_descriptions.php). 
+The National Snow and Ice Data Center hosts soil moisture data (from the NASA Soil Moisture Active Passive project, described [here](https://nsidc.org/data/smap), and hereafter referred to as SMAP). An important skill for analyzing the SMAP data is the ability to re-project the spatial data to spatial data collected from seperate sources, and covering different spatial extents. One such data source is the joint U.S. Geological Services (USGS) and NASA [Landsat Project](http://landsat.usgs.gov//about_project_descriptions.php).
 
 This tutorial outlines how to acquire SMAP and Landsat data, project SMAP data onto Landsat images, and create a Raster containing all of the resulting data. This will briefly cover creating a Raster from SMAP data (which comes in hdf5 format), but for a more detailed explanation refer to the smap_to_raster template.
 
@@ -27,7 +27,7 @@ This tutorial outlines how to acquire SMAP and Landsat data, project SMAP data o
 
 ## Prerequisites
 
-Necessary libraries- 
+Necessary libraries-
     - rhdf5
     - raster
     - rdgal
@@ -69,7 +69,7 @@ download.file('ftp://n5eil01u.ecs.nsidc.org/SAN/SMAP/SPL4SMGP.001/2015.04.01/SMA
 
 ### Landsat
 
-To acquire landsat data you will need the landsat-util command line utility. Information on installation can be found [here](http://landsat-util.readthedocs.io/en/latest/installation.html). If you are using windows be sure to first install [Docker](https://docs.docker.com/windows/), and follow the instructions under the landsat-util installation instructions in the Docker section. 
+To acquire landsat data you will need the landsat-util command line utility. Information on installation can be found [here](http://landsat-util.readthedocs.io/en/latest/installation.html). If you are using windows be sure to first install [Docker](https://docs.docker.com/windows/), and follow the instructions under the landsat-util installation instructions in the Docker section.
 
 Once you have installed landsat-util you can use the landsat commands described [here](http://landsat-util.readthedocs.io/en/latest/overview.html), to search for and download landsat data. Remember if you are using windows this will all be done in the Docker teminal, and each landsat command must be proceeded with:
 
@@ -203,6 +203,6 @@ Create raster stack, and save to geotiff file.
 # create raster stack
 projected_stack <- stack(raster_list)
 # save raster stack to a geotiff file
-writeRaster(projected_stack,'lsat_smap_stack.tif', 
+writeRaster(projected_stack,'lsat_smap_stack.tif',
             format = 'GTiff', overwrite=TRUE)
 ```
