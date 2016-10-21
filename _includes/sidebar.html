@@ -23,3 +23,22 @@
   {% endif %}
   </div>
 {% endif %}
+
+
+{% if page.lang %}
+<div class="sidebar sticky">
+<h3>Other Tutorials</h3>
+
+{% for member in site.data.libs %}
+
+{% assign counter = 0 %}
+<!-- this code counts the number of posts associated with the member -->
+{% for post in site.posts %}
+	{% if post.lang contains member.lang %}
+	{% assign counter = counter | plus: 1 %}
+	{% endif %}
+{% endfor %}
+  <h5><a href="./software/{{ member.lang }}">{{ member.lang }} ({{ counter }})</h5>
+{% endfor %}
+</div>
+{% endif %}

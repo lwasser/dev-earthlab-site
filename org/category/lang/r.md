@@ -2,11 +2,10 @@
 layout: post-by-category
 category: tutorials
 title: "Data Intensive Tutorials"
-permalink: /tutorials/
+permalink: tutorials/software/r/
 comments: false
 author_profile: false
-lang: []
+lang: [r]
 ---
 
-## Tutorials
-Tutorials that cover data intensive topics
+{{ page.lang }} Tutorials
