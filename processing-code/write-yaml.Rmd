@@ -1,0 +1,88 @@
+---
+title: "Write Yaml List from All Posts"
+output: html_document
+---
+
+First, load some libraries that we'll need to write the YAML
+
+```{r}
+### This code reads through a set of files and parses out the YAML tags
+### It then builds a yml list
+### holy sweet awesomeness batman!
+library(readr)
+library(yaml)
+library(dplyr)
+
+```
+
+Then --setup the code to grab all .md files in the _posts directory
+
+```{r}
+# avoid strings becoming factors
+options(stringsAsFactors = FALSE)
+
+# create list of all files from the working dir
+setwd("~/Documents/github/dev-earthlab-site/_posts")
+all.md.files <- list.files(pattern = ".md", recursive = TRUE)
+
+final.df <- as.data.frame(matrix(0, ncol = 2, nrow = 0))
+
+for (file in all.md.files) {
+  # read in first 210 lines - which should contain the front-matter
+  a <- read_lines(file, n_max=10)
+  # find the line that contains "authors"
+  b <- a[grep("authors:", a) ]
+  
+  # if the element is empty, move on to the next
+  if (is.na(b[1])) {
+    print("no authors, moving on")
+    } else {
+    # replace a few things
+    c <- gsub(pattern = "authors: ", x=b, replacement = "" )
+    c <- gsub(pattern = "\\]|\\[",x=c, replacement = "" )
+    
+
+    # remove any extra spaces
+    # c <- gsub(pattern = " ", x=c, replacement = "" )
+    # next parse out the various libraries
+    d <- data.frame(unlist(strsplit(c,',')))
+    names(d) <- "name"
+    # trim leading or training white space
+    trim <- function (x) gsub("^\\s+|\\s+$", "", x)
+    d$name <- trim(d$name)
+    
+    # remove space at the beginning of any cell
+    d$slug <- tolower(gsub(pattern = " ", x=d$name, replacement = "-" ))
+    
+    # build the data frame through each loop iteration
+    if (nrow(final.df)==0) {
+      final.df <- d
+    } else {
+      final.df <- rbind(d, final.df)
+    }
+    print(d)
+    print(final.df)
+    }
+  print(file)
+  print(b)
+}
+
+# extract just unique values from the df
+final.df.unique <- unique(final.df)
+
+# order alphabetically
+final.df.unique <- arrange(final.df.unique, slug)
+
+# generate YAML list
+finalYAML <- yaml::as.yaml(final.df.unique, column.major = FALSE)
+
+# print YAML output just to look at
+cat(finalYAML, "\n")
+
+fileConn<-file("authors.yml")
+writeLines(finalYAML, fileConn)
+close(fileConn)
+
+```
+
+

@@ -1,5 +1,5 @@
 ---
-author: Matt Oakley
+authors: [Matt Oakley]
 category: [tutorials]
 layout: single
 title: Acquiring tutorials from GitHub
