@@ -1,0 +1,8 @@
+- lang: python
+  libs:
+    - rpy2
+    - two
+- lang: r
+  libs:
+    - rpy2
+    - two

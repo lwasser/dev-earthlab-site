@@ -1,6 +1,6 @@
-- slug: 'max-joseph'
+- slug: max-joseph
   name: "Maxwell Joseph"
-  uri: "http://#"
+  url: "http://#"
   email: "maxwell.joseph@colorado.edu"
   bio: "Bio here."
   avatar: "bio-photo-2.jpg"
@@ -8,8 +8,16 @@
 
 - slug: leah-wasser
   name: "Leah A. Wasser"
-  uri: "http://#"
+  url: "http://#"
   email: "leah.wasser@colorado.edu"
   bio: "Bio here."
-  avatar: "bio-photo-2.jpg"
-  twitter: "extravagantman"
+  avatar:
+  twitter: 'leahawasser'
+
+- slug: matt-oakley
+  name: "Matt Oakley"
+  url:
+  email:
+  bio: "Bio here."
+  avatar:
+  twitter:
