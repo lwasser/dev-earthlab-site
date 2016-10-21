@@ -41,9 +41,6 @@ for (file in all.md.files) {
     c <- gsub(pattern = "authors: ", x=b, replacement = "" )
     c <- gsub(pattern = "\\]|\\[",x=c, replacement = "" )
     
-
-    # remove any extra spaces
-    # c <- gsub(pattern = " ", x=c, replacement = "" )
     # next parse out the various libraries
     d <- data.frame(unlist(strsplit(c,',')))
     names(d) <- "name"
@@ -60,8 +57,7 @@ for (file in all.md.files) {
     } else {
       final.df <- rbind(d, final.df)
     }
-    print(d)
-    print(final.df)
+
     }
   print(file)
   print(b)
