@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+
+<!-- List all posts authored by the page author -->
+
+
+
+
+{% for posts in site.posts %}
+  {% if post.authors contains page.author %}
+
+    <a href="#">{{ post.title }}</a>
+
+{% endfor %}
