@@ -1,10 +1,10 @@
 ---
 layout: post-by-category
 category: tutorials
-title: "R Data Intensive Tutorials"
-permalink: tutorials/software/r/
+title: "Python Based Data Intensive Tutorials"
+permalink: tutorials/software/python/
 comments: false
 author_profile: false
-language: r
+language: python
 langSide: true
 ---

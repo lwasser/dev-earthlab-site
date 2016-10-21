@@ -1,8 +1,9 @@
 - lang: python
   libs:
     - rpy2
-    - two
+    - h5py
 - lang: r
   libs:
-    - rpy2
-    - two
+    - raster
+    - rhdf5
+    - base

@@ -4,9 +4,6 @@ main:
   - title: "Tutorials"
     url: /tutorials/
 
-  - title: "Classroom Data Lessons"
-    url: /data-lessons/
-
   - title: "Tools"
     url: /tools/
 
