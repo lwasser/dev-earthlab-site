@@ -27,7 +27,7 @@ layout:
                <link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
                <description>{{ post.excerpt | xml_escape }}</description>
                {% for author in post.authors %}
-                 <dc:creator>{{ author }}</dc:creator>
+                 <author>{{ author }}</author>
                {% endfor %}
 
                <category>{{ post.categories }}</category>
