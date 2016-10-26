@@ -27,9 +27,7 @@ layout:
                <link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
                <guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}{{ post.url }}</guid>
                <description>{{ post.excerpt | xml_escape }}</description>
-               {% for author in post.authors %}
-                 <author>{{ author }}</author>
-               {% endfor %}
+                 <author>{{ site.author.email }} ({{ post.authors }})</author>
 
                <category>{{ post.categories }}</category>
                <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
