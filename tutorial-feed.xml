@@ -15,8 +15,8 @@ layout:
       <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
       <generator>jekyll</generator>
 
-      <managingEditor>{{ site.author.name }}</managingEditor>
-      <webMaster> {{ site.author.email }}</webMaster>
+      <managingEditor>{{ site.author.email }}</managingEditor>
+      <webMaster> {{ site.author.email }} ( {{ site.author.name }})</webMaster>
 
 
 
@@ -27,13 +27,11 @@ layout:
                <link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
                <description>{{ post.excerpt | xml_escape }}</description>
                {% for author in post.authors %}
-                 <author>{{ author }}</author>
+                 <dc:creator>{{ author }}</dc:creator>
                {% endfor %}
 
                <category>{{ post.categories }}</category>
                <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-
-               <source>....</source>
       </item>
 {% endfor %}
 
