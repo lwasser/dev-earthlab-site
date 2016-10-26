@@ -107,7 +107,10 @@ gen_author_profiles <- function(authors, prefix = "../org/authors") {
     
     # save as md
     out_file <- paste0(paste0(authors$slug[i], ".md"))
-    cat(auth_yaml, file = file.path(prefix, out_file))
+    cat(paste0("----\n", 
+               auth_yaml,
+               "----\n"),
+        file = file.path(prefix, out_file))
   }
 }
 
