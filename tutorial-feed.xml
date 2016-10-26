@@ -26,7 +26,7 @@ layout:
   <updated>{{ post.date | date_to_xmlschema }}</updated>{% endif %}
 {% for author in post.authors %}
   <author>
-    <name type="html">{{ author }}</name>
+    <name>{{ author }}</name>
   </author>
 {% endfor %}
   <content type="html">{{ post.excerpt | xml_escape }}
