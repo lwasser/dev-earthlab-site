@@ -1,8 +1,8 @@
 ----
 layout: post-by-author
-author: Max Joseph
-permalink: /authors/max-joseph/
-title: Max Joseph
+author: Leah Wasser
+permalink: /authors/leah-wasser/
+title: Leah Wasser
 author_profile: 'false'
 site-map: 'true'
 ----

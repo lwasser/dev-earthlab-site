@@ -1,8 +1,8 @@
 ----
 layout: post-by-author
-author: Max Joseph
-permalink: /authors/max-joseph/
-title: Max Joseph
+author: Zach Schira
+permalink: /authors/zach-schira/
+title: Zach Schira
 author_profile: 'false'
 site-map: 'true'
 ----
