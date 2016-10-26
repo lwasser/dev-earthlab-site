@@ -1,9 +1,6 @@
----
 layout: post-by-author
-author: Maxwell Joseph
+author: Max Joseph
 permalink: /authors/max-joseph/
-title: "Max"
-author_profile: false
-published: true
-site-map: true
----
+title: Max Joseph
+author_profile: 'false'
+site-map: 'true'
