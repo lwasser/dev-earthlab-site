@@ -25,6 +25,7 @@ layout:
       <item>
                <title>{{ post.title | cdata_escape }}</title>
                <link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
+               <guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}{{ post.url }}</guid>
                <description>{{ post.excerpt | xml_escape }}</description>
                {% for author in post.authors %}
                  <author>{{ author }}</author>
