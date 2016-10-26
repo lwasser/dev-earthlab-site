@@ -4,7 +4,7 @@ title                    : "Earth Lab Resources"
 title_separator          : "-"
 name                     : "Earth Analytics"
 description              : "Code, tutorials, and tools for modern Earth analytics"
-url                      : ""
+url                      : "https://earthlab.github.io"
 baseurl                  : "/dev-earthlab-site"
 gh_repo                  :
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -60,7 +60,7 @@ author:
   avatar           : "earth.jpg"
   bio              : "Geospatial data integration, analysis, and tutorials in R and Python"
   location         : "Boulder, Colorado"
-  email            :
+  email            : 'earth.lab@colorado.edu'
   uri              :
   bitbucket        :
   codepen          :
