@@ -1,8 +1,8 @@
 ----
 layout: post-by-author
-author: Max Joseph
-permalink: /authors/max-joseph/
-title: Max Joseph
+author: Author Two
+permalink: /authors/author-two/
+title: Author Two
 author_profile: 'false'
 site-map: 'true'
 ----
