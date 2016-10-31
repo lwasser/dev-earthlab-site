@@ -228,6 +228,10 @@ collections:
     permalink: /:title/:path
     title: Talking Heads
     date: 2015-08-01
+  tools:
+    output: true
+    permalink: /:collection/:path/
+    title: Tools
 
 
 # Slideshow stuff
