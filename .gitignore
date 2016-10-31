@@ -5,3 +5,5 @@ _site/
 _config.yml
 .Rproj.user
 .Rhistory
+*.Rproj
+
