@@ -63,5 +63,51 @@
 {% endfor %}
 {% endunless %}
 
+
+
+<h3>Tutorials By Language 222</h3>
+
+{% for member in site.data.libs222 %}
+ THE LANGUAGE: {{ member.lang }}
+{% assign counter = 0 %}
+<!-- this code counts the number of posts associated with the member -->
+{% for post in site.posts %}
+<!-- if there is a language associated with the post, figure out if it is member.lang -->
+ {% if post.lang2[member.lang] %} Does this work - why not? {% endif %}
+
+ {% if post.lang2[member.lang] %}
+<!-- if the post contains member.lang, then loop through libraries and add them to the count -->
+<!-- i think i may need a second loop to loop through the libraries in lib and count each one in my r.lib -->
+
+  {% for languages in post.lang2 %}
+	   {% assign counter = counter | plus: 1 %}
+  {% endfor %}
+{% endif %}
+
+{% endfor %}
+  <h5><a href="{{ site.url }}{{ site.baseurl }}/tutorials/software/{{ member.lang }}">{{ member.lang }} ({{ counter }})</a></h5>
+{% endfor %}
+
+<!-- list tutorials by library -->
+
+{% unless page.layout contains 'single' %}
+{% for member in site.data.libs %}
+
+{% if page.language contains member.lang %}
+ <h4>by {{ member.lang }} library</h4>
+  {% for lib in member.libs %}
+    {% assign counter = 0 %}
+ <!-- this code counts the number of posts associated with the member -->
+      {% for post in site.posts %}
+        {% if post.lib contains lib %}
+        {% assign counter = counter | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      <h5><a href="{{ site.url }}{{ site.baseurl }}/tutorials/software/{{ member.lang }}/{{ lib }}">{{ lib }} ({{ counter }})</a></h5>
+  {% endfor %}
+  {% endif %}
+{% endfor %}
+{% endunless %}
+
 </div>
 {% endif %}

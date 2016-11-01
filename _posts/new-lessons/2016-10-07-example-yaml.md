@@ -10,6 +10,11 @@ author_profile: false
 comments: true
 lang: [r, python]
 lib: [base, rpy2, h5py]
+lang2:
+  - r: [test]
+    libs: [one, two, three]
+  - python: [YES]
+    libs: [four, five, six]
 ---
 
 
