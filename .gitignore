@@ -3,6 +3,7 @@ _site/
 .jekyll-metadata
 .DS_Store
 _config.yml
-.Rhistory
 .Rproj.user
+.Rhistory
+*.Rproj
 
