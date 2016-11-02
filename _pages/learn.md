@@ -3,28 +3,44 @@ layout: single
 title: "Learn"
 permalink: /learn/
 header:
-  overlay_image: about-header.jpg
-  cta_label: "Join our meetup!"
+  overlay_color: "#333"
+  cta_label: "CU Students, Enroll Now - GEOG 4100 / 5100"
   cta_url: "/meetup/"
   overlay_filter: rgba(0, 0, 0, 0.5)
   caption:
-excerpt: 'Self-paced tutorials, at your service.'
+excerpt: 'Data intensive learning.'
 modified: 2016-08-21T17:19:29-04:00
-author_profile: true
+author_profile: false
 ---
 
 
-## Code tutorials
-We know the code struggle and document it for you! We develop tutorials that
-walk you through working with different types of data. Ask us questions or suggest
-other tutorials in the comments. We'll try to help!
+## Recent code tutorials
 
-## Recent tutorials
+Check out our latest code tutorials. Leave questions in the comment box at
+the bottom. We'll try our best to help!
 
--- list the top 3 -- this could be an include file.
+  {% for post in site.categories.tutorials limit:3 %}
+  <article>
+    {% if post.link %}
+      <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="icon-link"></i></h2>
+    {% else %}
+      <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+      <span class="post-date">
+      {% if post.lastModified %}Last modified: {{ post.lastModified | date: "%b %-d, %Y" }}{% endif %}
+      {% if post.packagesLibraries %} - Libraries: {{ post.packagesLibraries | join: ', ' %}}{% endif %}
+      </span>
+      <p>{% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p>
+    {% endif %}
+  </article>
+{% endfor %}
 
-## Degree programs
-We are working on several degree programs in Earth Systems Analytics at
-University of Colorado, Boulder. Stay tuned for more!
+[View All Tutorials](/tutorials/)
+
+## Courses
+We are currently restructuring Earth Systems Analytics (GEOG 4100 / 5100) - to
+begin Spring 2017 at the CU Boulder campus. This
+data intensive course fuses earth system science, ecology, remote sensing
+and data science. Stay tuned for course materials as they develop.
+
 
 Questions? Tweet: @leahawasser or @mxwlj

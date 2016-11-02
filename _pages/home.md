@@ -15,17 +15,18 @@ feature_row:
     excerpt: "Check out our code tutorials. Learn about courses and programs
     we are currently developing."
     url: "/learn/"
-    btn_label: "Learn More g"
+    btn_label: "Learn More"
   - image_path: tools.png
     alt: "Get Tools"
     title: "Get Tools"
-    excerpt: "We build packages and tools to help you process data more efficiently. What does that mean?"
+    excerpt: "We build tools for R, Python and high performance computing environments
+     to help you efficiently process data."
     url: "/tools/"
     btn_label: "Learn More"
   - image_path: learn.png
     alt: "Participate"
     title: "Participate"
-    excerpt: "We offer workshops and trainings. And have a weekly meetup! Also check out our internship program."
+    excerpt: "Check out our upcoming workshops and training events. Join our weekly meetup."
     url: "/participate/"
     btn_label: "Learn About Our Events!"
 github:
