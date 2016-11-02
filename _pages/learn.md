@@ -37,10 +37,10 @@ the bottom. We'll try our best to help!
 [View All Tutorials](/tutorials/)
 
 ## Courses
-We are currently restructuring Earth Systems Analytics (GEOG 4100 / 5100) - to
-begin Spring 2017 at the CU Boulder campus. This
-data intensive course fuses earth system science, ecology, remote sensing
-and data science. Stay tuned for course materials as they develop.
+We are currently redesigning Earth Systems Analytics (GEOG 4100 / 5100). This 
+course fuses key topics related to the grand challenges in science, remote sensing
+and computationally intensive approaches. The course will be held in Spring 2017
+at the CU Boulder campus. Stay tuned for course materials as they develop.
 
 
 Questions? Tweet: @leahawasser or @mxwlj
