@@ -22,9 +22,9 @@ the bottom. We'll try our best to help!
   {% for post in site.categories.tutorials limit:3 %}
   <article>
     {% if post.link %}
-      <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="icon-link"></i></h2>
+      <h2 class="link-post"><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="icon-link"></i></h2>
     {% else %}
-      <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+      <h2><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
       <span class="post-date">
       {% if post.lastModified %}Last modified: {{ post.lastModified | date: "%b %-d, %Y" }}{% endif %}
       {% if post.packagesLibraries %} - Libraries: {{ post.packagesLibraries | join: ', ' %}}{% endif %}
@@ -34,10 +34,10 @@ the bottom. We'll try our best to help!
   </article>
 {% endfor %}
 
-[View All Tutorials](/tutorials/)
+[View All Tutorials]({{ site.baseurl }}{{ site.baseurl }}/tutorials/)
 
 ## Courses
-We are currently redesigning Earth Systems Analytics (GEOG 4100 / 5100). This 
+We are currently redesigning Earth Systems Analytics (GEOG 4100 / 5100). This
 course fuses key topics related to the grand challenges in science, remote sensing
 and computationally intensive approaches. The course will be held in Spring 2017
 at the CU Boulder campus. Stay tuned for course materials as they develop.
