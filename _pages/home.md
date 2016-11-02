@@ -23,12 +23,12 @@ feature_row:
      to help you efficiently process data."
     url: "/tools/"
     btn_label: "Learn More"
-  - image_path: learn.png
+  - image_path: participate.png
     alt: "Participate"
     title: "Participate"
     excerpt: "Check out our upcoming workshops and training events. Join our weekly meetup."
     url: "/events/"
-    btn_label: "Learn About Our Events!"
+    btn_label: "Learn More"
 github:
   - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 intro:
