@@ -34,7 +34,7 @@ the bottom. We'll try our best to help!
   </article>
 {% endfor %}
 
-[View All Tutorials]({{ site.baseurl }}{{ site.baseurl }}/tutorials/)
+[View All Tutorials]({{ site.url }}{{ site.baseurl }}/tutorials/)
 
 ## Courses
 We are currently redesigning Earth Systems Analytics (GEOG 4100 / 5100). This
