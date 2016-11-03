@@ -9,7 +9,7 @@ permalink: /about/
 
 This site hosts resources developed by the Earth Lab team at University of Colorado, Boulder. 
 This website contains data, code tutorials, and blog posts related to our work. 
-Most of the tutorials are aimed at building R and Python skills relevant to working with Earth analytics, including geospatial, social, and biological and earth systems data. 
+Most of the tutorials are aimed at building R and Python skills relevant to working with Earth analytics, including geospatial, social, biological, and earth systems data. 
 The Analytics Hub is part of Earth Lab at the University of Colorado Boulder. 
 
 ## Our Team
