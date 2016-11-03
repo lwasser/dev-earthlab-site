@@ -9,11 +9,7 @@ header:
   overlay_filter: rgba(0, 0, 0, 0.5)
   caption:
 excerpt: 'Supporting data intensive community.'
-<<<<<<< HEAD
-modified: 2016-11-21T12:19:29-04:00
-=======
-modified: 2016-11-21T17:19:29-04:00
->>>>>>> master
+modified: 2016-11-31T12:19:29-04:00
 author_profile: false
 ---
 
