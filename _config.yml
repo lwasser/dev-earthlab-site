@@ -227,8 +227,14 @@ collections:
     output: true
     permalink: /:collection/:path/
     title: Tools
-
+  events:
+    output: true
+    permalink: /:collection/:path/
+    title: Events
 
 # Slideshow stuff
 # Format for the slides, can be either 16:9 or 4:3
 format: '4:3'
+
+# Publish posts and events that are post-dated
+future: true
