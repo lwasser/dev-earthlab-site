@@ -9,10 +9,13 @@ header:
   overlay_filter: rgba(0, 0, 0, 0.5)
   caption:
 excerpt: 'Supporting data intensive community.'
+<<<<<<< HEAD
 modified: 2016-11-21T12:19:29-04:00
+=======
+modified: 2016-11-21T17:19:29-04:00
+>>>>>>> master
 author_profile: false
 ---
-
 
 {% capture nowyear %}{{'now' | date: '%Y'}}{% endcapture %}
 {% capture nowday %}{{'now' | date: '%j'}}{% endcapture %}

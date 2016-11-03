@@ -3,13 +3,18 @@ layout: single
 title: 'Title in Single Quotes'
 authors: [Matt Oakley, Author Two]
 category: [tutorials]
-excerpt: 'Please write 1-3 sentence exerpt summarizing the tutorial here. '
+excerpt: 'DELETE THIS POST Please write 1-3 sentence exerpt summarizing the tutorial here. '
 sidebar:
   nav:
 author_profile: false
 comments: true
 lang: [r, python]
 lib: [base, rpy2, h5py]
+lang2:
+  - tool: r
+    libs: [one, two, three]
+  - tool: python
+    libs: [four, five, six]
 ---
 
 
