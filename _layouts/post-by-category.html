@@ -38,10 +38,29 @@ layout: default
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label }}</a></div>{% endif %}
 
         <!-- List all posts in the page category  -->
-        {% for post in site.categories.[page.category] %}
-          <h3><a href="{{ site.baseurl }}{{ post.url}}">{{ post.title }}</a></h3>
-          {{ post.excerpt }}
-        {% endfor %}
+
+
+
+          {% if page.langSide %}
+
+          <!-- Only list posts where language = page.lang -->
+          {% for post in site.posts %}
+            {% if post.lang contains page.language %}
+              <h3><a href="{{ site.baseurl }}{{ post.url}}">{{ post.title }}</a></h3>
+              {{ post.excerpt }}
+            {% endif %}
+          {% endfor %}
+
+          {% else %}
+            {% for post in site.categories.[page.category] %}
+          <!-- List all posts in the page category  -->
+
+              <h3><a href="{{ site.baseurl }}{{ post.url}}">{{ post.title }}</a></h3>
+              {{ post.excerpt }}
+            {% endfor %}
+
+          {% endif %}
+
 
 
 

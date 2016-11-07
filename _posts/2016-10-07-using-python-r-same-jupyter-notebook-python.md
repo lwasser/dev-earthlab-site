@@ -1,13 +1,16 @@
 ---
-authors: [Matt Oakley]
 layout: single
+title: 'Using R and Python in the same Jupyter Notebook'
+authors: [Matt Oakley]
 category: [tutorials]
 excerpt: 'About this tutorial...'
 sidebar:
   nav:
 author_profile: false
 comments: false
-title: Using R and Python in the same Jupyter Notebook
+lang: [r, python]
+lib: [base, rpy2, h5py]
+
 ---
 
 

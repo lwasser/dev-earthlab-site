@@ -4,7 +4,8 @@ category: tutorials
 title: "Data Intensive Tutorials"
 permalink: /tutorials/
 comments: false
-author_profile: true
+author_profile: false
+lang: []
 ---
 
 ## Tutorials

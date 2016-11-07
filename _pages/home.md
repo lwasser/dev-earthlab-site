@@ -15,19 +15,20 @@ feature_row:
     excerpt: "Check out our code tutorials. Learn about courses and programs
     we are currently developing."
     url: "/learn/"
-    btn_label: "Learn More g"
+    btn_label: "Learn More"
   - image_path: tools.png
     alt: "Get Tools"
     title: "Get Tools"
-    excerpt: "We build packages and tools to help you process data more efficiently. What does that mean?"
+    excerpt: "We build tools for R, Python and high performance computing environments
+     to help you efficiently process data."
     url: "/tools/"
     btn_label: "Learn More"
-  - image_path: learn.png
+  - image_path: participate.png
     alt: "Participate"
     title: "Participate"
-    excerpt: "We offer workshops and trainings. And have a weekly meetup! Also check out our internship program."
-    url: "/participate/"
-    btn_label: "Learn About Our Events!"
+    excerpt: "Check out our upcoming workshops and training events. Join our weekly meetup."
+    url: "/events/"
+    btn_label: "Learn More"
 github:
   - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 intro:

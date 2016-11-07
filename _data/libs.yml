@@ -1,0 +1,9 @@
+- lang: python
+  libs:
+    - rpy2
+    - h5py
+- lang: r
+  libs:
+    - raster
+    - rhdf5
+    - base

@@ -23,3 +23,46 @@
   {% endif %}
   </div>
 {% endif %}
+
+
+{% if page.lang or page.language %}
+<div class="sidebar sticky">
+<h3>Tutorials By Language</h3>
+
+{% for member in site.data.libs %}
+
+{% assign counter = 0 %}
+<!-- this code counts the number of posts associated with the member -->
+{% for post in site.posts %}
+
+	{% if post.lang contains member.lang %}
+	{% assign counter = counter | plus: 1 %}
+	{% endif %}
+{% endfor %}
+  <h5><a href="{{ site.url }}{{ site.baseurl }}/tutorials/software/{{ member.lang }}">{{ member.lang }} ({{ counter }})</a></h5>
+{% endfor %}
+
+<!-- list tutorials by library -->
+
+{% unless page.layout contains 'single' %}
+{% for member in site.data.libs %}
+
+{% if page.language contains member.lang %}
+ <h4>by {{ member.lang }} library</h4>
+  {% for lib in member.libs %}
+    {% assign counter = 0 %}
+ <!-- this code counts the number of posts associated with the member -->
+      {% for post in site.posts %}
+        {% if post.lib contains lib %}
+        {% assign counter = counter | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      <h5><a href="{{ site.url }}{{ site.baseurl }}/tutorials/software/{{ member.lang }}/{{ lib }}">{{ lib }} ({{ counter }})</a></h5>
+  {% endfor %}
+  {% endif %}
+{% endfor %}
+{% endunless %}
+
+
+</div>
+{% endif %}
